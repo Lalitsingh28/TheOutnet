@@ -37,8 +37,10 @@ var wishlistArr = [
 localStorage.setItem("wishlistItem", JSON.stringify(wishlistArr));
 var wishlistData = JSON.parse(localStorage.getItem("wishlistItem"));
 displayData(wishlistData)
+
 var bagArr = JSON.parse(localStorage.getItem("bagItem")) || []
-var count = JSON.parse(localStorage.getItem("count")) || 0;
+document.querySelector("#sort").addEventListener("change", sort)
+
 
 function displayData(data) {
     document.querySelector("#grid").innerHTML = "";
@@ -88,22 +90,34 @@ function displayData(data) {
 }
 
 function addToBag(elem) {
-    count++;
     bagArr.push(elem)
     localStorage.setItem("bagItem", JSON.stringify(bagArr))
 }
 
 function Delete(elem, index) {
     wishlistData.splice(index, 1)
-    count--;
     localStorage.setItem("wishlistItem", JSON.stringify(wishlistData))
     displayData(wishlistData)
 }
 
-document.querySelector("#sort").addEventListener("change", sort)
 function sort() {
     var value = document.querySelector("#sort").value
-    if (value == "") {
-        displayData
+   
+    if (value == "htl") {
+        wishlistData.sort(function (a, b) {
+            let x = a.price.slice(1, -1)
+            let y = b.price.slice(1, -1)
+            return Number(y) - Number(x);
+        })
+        displayData(wishlistData)
+    }
+
+    if (value == "lth") {
+        wishlistData.sort(function (a, b) {
+            let x = a.price.slice(1, -1)
+            let y = b.price.slice(1, -1)
+            return Number(x) - Number(y);
+        })
+        displayData(wishlistData)
     }
 }

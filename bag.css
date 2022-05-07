@@ -1,0 +1,141 @@
+body{
+    background-color: rgb(248, 246, 246);
+}
+#boxes{
+    width:95%;
+    margin:auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,200px 500px);
+    gap:20px;
+    grid-template-areas:
+          "b1 b1 b1"
+          "b2 b2 b3"
+          ". . b3";
+}
+
+#b1{
+    width:100%;
+    margin-top:20px;
+    grid-area: b1;
+    background-color: white;
+}
+#b1>h3,p{
+    margin-left:20px;
+    font-size: 25px;
+}
+
+#b2{
+    margin-top:10px;
+    width:100%;
+    height:auto;
+    grid-area: b2;
+    background-color: white;
+    display:flex;
+}
+#b3{
+    margin-top:10px;
+    width:100%;
+    height:auto;
+    grid-area: b3;
+    background-color: white;
+}
+hr{
+    width:90%
+}
+#b3 > p{
+text-align: left;
+}
+#b3 > h3{
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 50px;
+    }
+#b3>p:nth-child(11){
+    font-size: 20px;
+    text-align: center;
+}
+#b3>div>p{
+    font-size: 22px;
+    text-align: center;
+    background-color: aqua;
+    padding:10px 20px 10px 20px;
+    margin-right:20px;
+    color:rgb(84, 84, 231)
+
+}
+#b3>div:last-child{
+    background-color: black;
+    color:white;
+    font-size: 20px;
+    text-align: center;
+    margin:20px;
+    padding:20px 10px 20px 10px
+}
+#b2>div{
+    display:flex;
+    width:25%;
+    margin:20px;
+}
+#b2 >div>img{
+    width:100%;
+}
+#b2 >div:last-child{
+    display: block;
+    width:50%
+}
+#b2>div>p:first-child{
+  margin-left:40px;
+  font-size: 20px;
+  color:rgb(124, 121, 121);
+}
+#b2>div>h3{
+    font-size: 20px;
+    margin-bottom:-10px;
+}
+#b2>div>p:nth-child(3){
+    margin-top:30px;
+    font-size: 20px;
+    margin-left: -4px;
+}
+#b2>div>p:nth-child(4){
+    margin-top:30px;
+    font-size: 20px;
+    margin-left: -3px;
+}
+#b2>div>p:nth-child(5){
+    margin-top:30px;
+    font-size: 20px;
+    color:rgb(177, 1, 1);
+    margin-left: -3px;
+}
+#b2>div>p:nth-child(6){
+    margin-top:-15px;
+    font-size: 20px;
+    color:darkgrey;
+    text-decoration: line-through;
+    margin-left: -3px;
+}
+#b3{
+    text-align: center;
+
+}
+#b3>span{
+  font-size: 20px;
+  padding:80px;
+}
+
+/* 
+@media all and (min-width: 451px) and (max-width: 750px) {
+    #container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 200px);
+    }
+  }
+
+  @media all and (min-width: 100px) and (max-width: 450px) {
+    #container {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, 120px);
+    }
+} */

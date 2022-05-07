@@ -1,8 +1,17 @@
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans&family=Roboto:wght@300&family=Ruda&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
         <title>Men's page</title>
         <style>
+ body{
 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Ruda', sans-serif;
+}
      .product{
         display:grid;
         width:90%;
@@ -79,6 +88,63 @@ h1{
     margin: auto;
     font-weight: 700;
 }
+
+#grid {
+    width: 90%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    /* border: 2px solid red; */
+}
+
+#grid>div>img {
+    width: 100%;
+}
+
+#grid>div>img+p {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+#grid>div>img+p+p {
+    text-align: center;
+    font-size: 13px;
+}
+
+#grid>div>img+p+p+p {
+    text-align: center;
+    color: red;
+    margin-top: 20px;
+    font-weight: 450;
+}
+
+.disPrice {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.disPrice>span {
+    font-size: 14px;
+}
+
+.disPrice>span:first-child {
+    text-decoration: line-through;
+}
+
+.btn1 {
+    width: 100%;
+    margin: 20px 0px;
+    padding: 18px;
+    font-weight: 450;
+    background-color: white;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
         </style>
         </head>
         <body>
@@ -124,7 +190,7 @@ h1{
                 <p>70% Off</p>
                 <p>Editorial</p>
             </div>
-            <div class="product"></div>
+            <div class="product" id="grid"></div>
         </body>
          
 <script>
@@ -256,7 +322,7 @@ var products_data=[
     ];
     localStorage.setItem("ecomm-cart",JSON.stringify(products_data));
     
-//  var cartLSData=JSON.parse(localStorage.getItem("ecomm-cart"))||[];
+ var cartLSData=JSON.parse(localStorage.getItem("ecomm-cart"))||[];
 
     var products=document.querySelector(".product");
 

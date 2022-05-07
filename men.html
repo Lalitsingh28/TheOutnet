@@ -10,6 +10,10 @@
         grid-template-columns:repeat(3,1fr);
         gap: 50px;
         margin-top: 50px;
+        
+    }
+    .product>div{
+        cursor:pointer;
     }
     body {
         text-align: center;
@@ -78,6 +82,11 @@ h1{
     font-size: 38px;
     margin: auto;
     font-weight: 700;
+};
+.size{
+    font:16px;
+    font-weight: 700;
+    display:block;
 }
         </style>
         </head>
@@ -254,9 +263,9 @@ var products_data=[
 
     },
     ];
-    localStorage.setItem("ecomm-cart",JSON.stringify(products_data));
+    // localStorage.setItem("addtocart",JSON.stringify(products_data));
     
-//  var cartLSData=JSON.parse(localStorage.getItem("ecomm-cart"))||[];
+ var cartLSData=JSON.parse(localStorage.getItem("addtocart"))||[];
 
     var products=document.querySelector(".product");
 
@@ -267,14 +276,15 @@ var products_data=[
         data.forEach(function(element){
 
             var card=document.createElement("div");
+            
 
 var img=document.createElement("img");
 img.src=element.img;
-window.location.href="";
 
-var brand=document.createElement("h2");
+
+var brand=document.createElement("p");
             brand.textContent=element.brand;
-            
+            brand.setAttribute("class",size);
 
             var name=document.createElement("p");
             name.textContent=element.name;
@@ -300,11 +310,19 @@ category.textContent=element.category; */
 //             })
 
             card.append(img,brand,name,price,priceno,discount);
+            card.addEventListener("click",function(){
+                cart(element);
+            })
+
             products.append(card);
         });
     };
     display(products_data);
-    
+    function cart(element){
+cartLSData.push(element);
+localStorage.setItem("addtocart",JSON.stringify(cartLSData));
+// console.log(cartLSData);
+    }
 //     function AddToCart(element){
 // cartLSData.push(element);
 // localStorage.setItem("ecomm-cart",JSON.stringify(cartLSData));

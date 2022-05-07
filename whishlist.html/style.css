@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.top {
+    width: 90%;
+    margin: 25px auto;
+    line-height: 35px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
+a {
+    padding-left: 10px;
+    font-size: 0.9em;
+    color: gray;
+}
+
+#first {
+    padding-left: 0px;
+}
+
+.top>h3 {
+    letter-spacing: 4px;
+    font-size: 1.4em;
+    font-weight: 450;
+}
+
+.top>p {
+    font-size: 0.85em;
+    padding-bottom: 20px;
+}
+
+#icons {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    /* border: 2px solid red; */
+}
+
+#icons>img:hover {
+    cursor: pointer;
+}
+
+/* .top+div {
+    width: 90%;
+    margin: auto;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    padding: 80px 0px;
+}
+
+.fav {
+    width: 25%;
+    margin: auto;
+    border: 2px solid red;
+}
+
+.fav>img {
+    display: block;
+    margin: 25px auto;
+    width: 35px;
+}
+
+.fav>h2 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.fav>p {
+    text-align: center;
+    margin: 25px 0px;
+}
+
+.fav>button {
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.fav>button:hover {
+    cursor: pointer;
+    border: 1px solid black;
+} */
+
+#grid {
+    width: 90%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    /* border: 2px solid red; */
+}
+
+#grid>div>img {
+    width: 100%;
+}
+
+#grid>div>img+p {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+#grid>div>img+p+p {
+    text-align: center;
+    font-size: 13px;
+}
+
+#grid>div>img+p+p+p {
+    text-align: center;
+    color: red;
+    margin-top: 20px;
+    font-weight: 450;
+}
+
+.disPrice {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.disPrice>span {
+    font-size: 14px;
+}
+
+.disPrice>span:first-child {
+    text-decoration: line-through;
+}
+
+.btn1 {
+    width: 100%;
+    margin: 20px 0px;
+    padding: 18px;
+    font-weight: 450;
+    background-color: white;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+#grid>div>button:hover {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.btn2 {
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 20px;
+    font-weight: 450;
+    background-color: white;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.filter{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.filter>div{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#sort{
+    padding: 12px 20px;
+}
+

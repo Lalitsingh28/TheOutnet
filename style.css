@@ -62,11 +62,13 @@ h3 {
     flex-direction: column;
 }
 
-p{
+a{
     font-size: 14px;
     margin: 12px 0px;
+    text-decoration: none;
+    color: black;
 }
 
-p:hover{
+a:hover{
     cursor: pointer;
 }

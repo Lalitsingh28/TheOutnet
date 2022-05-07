@@ -168,12 +168,6 @@ a {
     justify-content: flex-end;
 }
 
-.filter>div{
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-}
-
 #sort{
     padding: 12px 20px;
 }

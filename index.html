@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>Shopping Bag |</title>
+   <link rel="stylesheet" href="bag.css">
+</head>
+<body>
+    <div id="boxes">
+       <div id="b1">
+           <h3>Shopping Bag</h3>
+           <p> 1 Items</p>
+           <p class="para"></p>
+       </div>
+       <div id="b2">
+          
+       </div>
+       <div id="b3">
+           <h2>Order Summary</h2>
+           <p>Sub-Total</p>
+           <p>Shipping<p>
+           <p>Taxes & Duties</p>
+           <hr>
+           <p>Add a Promo Code</p>
+           <hr>
+           <h3>Total(USD)</h3>
+           <p>You Are Saving </p>
+           <div><p>Any applicable taxes and/or duties have been applied to your Bag</p></div>
+           <div>
+               Proceed To Checkout
+           </div>
+       </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var productDetails = [
+        {
+            productimg:
+        "https://www.theoutnet.com/variants/images/1647597280507873/F/w960.jpg",
+      productname: "EMILIA WICKSTEAD",
+      productType: "Jeremy pinstriped crepe peplum blazer",
+      productcolor: "Midnight blue   |   UK 14", 
+      productprice:"$654",
+      cutprice:"$1,455"
+
+        }
+    ]
+    productDetails.forEach(function (elem){
+        var box1 = document.createElement("div")
+        var image = document.createElement("img")
+        image.setAttribute("src", elem.productimg);
+
+        var box2 = document.createElement("div")
+        var justin= document.createElement("p");
+        justin.innerText = "JUST IN";
+        var name = document.createElement("h3");
+        name.innerText = elem.productname;
+        var Type= document.createElement("p");
+        Type.innerText = elem.productType;
+        var color= document.createElement("p");
+        color.innerText = elem.productcolor;
+        var price = document.createElement("p");
+        price.innerText = elem.productprice;
+        var cutprice = document.createElement("p");
+        cutprice.innerText = elem.cutprice;
+
+        box1.append(image);
+        box2.append(justin,name,Type,color,price,cutprice)
+        document.querySelector("#b2").append(box1,box2);
+        console.log(b)
+        
+    })
+
+
+</script>

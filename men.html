@@ -1,0 +1,315 @@
+<html>
+    <head>
+        <title>Men's page</title>
+        <style>
+
+     .product{
+        display:grid;
+        width:90%;
+        margin:auto;
+        grid-template-columns:repeat(3,1fr);
+        gap: 50px;
+        margin-top: 50px;
+    }
+    body {
+        text-align: center;
+    }
+    .product img{
+        width:100%;
+    }
+
+            #cont {
+              display:flex;
+              height:50px;
+              width:100%;
+              box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+              justify-content:space-around;
+              margin:auto; 
+            }
+          .cut{
+              text-decoration: line-through;
+          }
+           #navbar1{
+    height: 50px;
+    width:90% ;
+    margin: auto;
+   
+    display: flex;
+  
+    margin-top: 20px;
+}
+
+h1{
+  margin-left: 200px; 
+  margin-bottom: 20px; 
+}
+#options1>div>img{
+    height: 30px;
+    width: 30px;
+    margin-top: 20px;
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    /* border: 1px solid; */
+    margin: auto;
+}
+#search{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 65px;
+}
+#box{
+    height: 45px ;
+    /* border: 1px solid; */
+    width: 90%;
+}
+ #div1{
+    height: 100%;
+    width: 80%;
+    /* border: 1px solid; */
+    display: flex;
+    font-size: 21px;
+}
+#div2{
+    height: 100%;
+    width: 200%;
+    /* border: 1px solid; */
+    display: flex;
+    font-size: 38px;
+    margin: auto;
+    font-weight: 700;
+}
+        </style>
+        </head>
+        <body>
+            
+            <div id="navbar1"> 
+                <div id="div1">
+                    <p>Women<p>
+                    <p style="margin-left: 15px; margin-right: 15px ;color: gray;">|</p>
+                    <p >Men</p>
+                </div>
+                <div id="div2">
+        
+                    <P style="margin: auto;margin-left: 235px;">THE OUTLINE<P>
+                    <!-- <P style="margin: auto;margin-right: 155px;">O U T N E T</P> -->
+                </div>
+                
+            
+        <div id="box">
+         <div id="options1">
+        <div id="search">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQecw_zqoXRbHUtBScAOKFvE25KoAJzw-LbBgZ9Qplj8nP7eKf9NZPT31ZWpvDW6ak6V7k&usqp=CAU" alt="">
+            <h3 style="margin-top: 13px;margin-left: 5px;">Search</h3>
+                <p style="margin-left: 7px;margin-right: 7px;margin-top: 13px;">|</p>
+            <img style="margin-left: 10px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJXoXtkVF0-j3quYzuUug5Tslf-cvcd8L-rw&usqp=CAU" alt="">
+            <img  style="margin-left: 25px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUFvtWN2T53xmppRsKIQKoAo28dKs_9GAJyw&usqp=CAU" alt="">
+        </div>
+                </div>
+            </div>
+            </div>
+            <br><br><br>
+                    
+            </div>
+            
+             <div id="cont">
+                <p>Just In</p>
+                <p>Designers</p>
+                <p>Bestsellers</p>
+                <p>Clothing</p>
+                <p>Shoes</p>
+                <p>Accessories</p>
+                <p>Sports</p>
+                <p>Wardrobe Staples</p>
+                <p>70% Off</p>
+                <p>Editorial</p>
+            </div>
+            <div class="product"></div>
+        </body>
+         
+<script>
+var products_data=[
+    {
+        img:"https://www.theoutnet.com/variants/images/43769801095378508/F/w358_q80.jpg",
+        brand:"VALENTINO",
+        name:"wool and silk-blend fallie jacket",
+        price:"$1,174",
+        price2:"$2498",
+        discount:"53%off",
+        category:"clothing"
+    },
+    
+    {
+        img:"https://www.theoutnet.com/variants/images/38063312421100184/F/w358_q80.jpg",
+        brand:"BALMAIN",
+        name:"Denim jeans",
+        price:"$385",
+        price2:"$857",
+        discount:"55%off",
+        category:"clothing",
+        
+    },
+    {
+        img:"https://www.theoutnet.com/variants/images/1647597277378448/F/w358_q80.jpg",
+        brand:"VELENTINO",
+        name:"Double-breasted studded gabardine trench coat",
+        price:"$1,108",
+        price2:"$2462",
+        category:"clothing",
+        discount:"55%off"
+    },
+    {
+        img:"https://www.theoutnet.com/variants/images/46376663162592576/F/w358_q80.jpg",
+        brand:"ACNE STUDIOS",
+        name:"Checked wool-blend flannel shirt",
+        price:"$178",
+        price2:"$323",
+        category:"clothing",
+        discount:"45%off"
+    },
+    {
+        img:"https://www.theoutnet.com/variants/images/43769801095174930/F/w358_q80.jpg",
+        brand:"ADIDAS ORIGINALS",
+        name:"Multix-jersey-paneled mesh running sneakers",
+        price:"$48",
+        price2:"$84",
+        category:"shoes",
+        discount:"44%off"
+    },
+    {
+        img:"https://www.theoutnet.com/variants/images/43769801095686840/F/w340_q80.jpg",
+        brand:"ADIDAS ORIGINALS",
+        name:"Striped two-tone mesh sneakers",
+        price:"$48",
+        category:"shoes",
+        price2:"$84",
+        discount:"44%off"
+    },
+  
+    {
+        img:"https://www.theoutnet.com/variants/images/43769801098164004/E/w358_q80.jpg",
+        brand:"MONTBLANC",
+        name:"Leather belt",
+        price:"$150",
+        category:"accessories",
+        price2:"$252",
+        discount:"40%off"
+    },
+    {
+        img:"https://www.theoutnet.com/variants/images/33258524071966434/E/w358_q80.jpg",
+        brand:"BOTTEGA VENETA",
+        name:"Round-frame acetate and bronze-tone sunglasses",
+        price:"$273",
+        category:"accessories",
+        price2:"$472",
+        discount:"42%off"
+    },
+    {
+        img:"https://www.theoutnet.com/variants/images/36093695688865106/F/w720_q80.jpg",
+        brand:"CANALI",
+        name:"Jacquard-knit wool,silk and cashmere-blend sweater",
+        price:"$330",
+        category:"accessories",
+        price2:"$737",
+        discount:"55%off"
+    },
+    {
+        img:"https://www.theoutnet.com/variants/images/46376663162591182/F/w720.jpg",
+        brand:"TOD'S",
+        name:"Polacco suede desert boots",
+        price:"$250",
+        category:"shoes",
+        price2:"$419",
+        discount:"40%off"
+
+    },
+    {
+        img:"https://www.theoutnet.com/variants/images/43769801094859608/F/w720_q80.jpg",
+        brand:"ADIDAS ORIGINALS",
+        name:"Printed French cotton-terry sweatshirt",
+        price:"$25",
+        category:"sports",
+        price2:"$48",
+        discount:"46%off"
+
+    },
+    {
+        img:"https://www.theoutnet.com/variants/images/38063312419103171/F/w320_q80.jpg",
+        brand:"MICHAEL KORS",
+        name:"Nick snake-effect leather sneakers",
+        price:"$138",
+        category:"sports",
+        price2:"$252",
+        discount:"45%off"
+
+    },
+    {
+        img:"https://www.theoutnet.com/variants/images/31840166391958040/F/w1020_q80.jpg",
+        brand:"JOSEPH",
+        name:"Paneled ribbed and suede jacket",
+        price:"$728",
+        category:"clothing",
+        price2:"$1,616",
+        discount:"55%off"
+
+    },
+    ];
+    localStorage.setItem("ecomm-cart",JSON.stringify(products_data));
+    
+//  var cartLSData=JSON.parse(localStorage.getItem("ecomm-cart"))||[];
+
+    var products=document.querySelector(".product");
+
+    // var filter=document.querySelector("select");
+    
+    function display(data){
+        products.innerHTML=null;
+        data.forEach(function(element){
+
+            var card=document.createElement("div");
+
+var img=document.createElement("img");
+img.src=element.img;
+window.location.href="";
+
+var brand=document.createElement("h2");
+            brand.textContent=element.brand;
+            
+
+            var name=document.createElement("p");
+            name.textContent=element.name;
+            
+          var price=document.createElement("h2");
+            price.textContent=element.price;
+           
+         var   priceno=document.createElement("p");
+            priceno.textContent=element.price2;
+            priceno.setAttribute("class","cut");
+
+
+           var discount=document.createElement("p");
+            discount.textContent=element.discount;
+
+/* var category=document.createElement("p");
+category.textContent=element.category; */
+
+// var button=document.createElement("button");
+//             button.innerText="Add to Cart";
+//             button.addEventListener("click",function(){
+//                 AddToCart(element);
+//             })
+
+            card.append(img,brand,name,price,priceno,discount);
+            products.append(card);
+        });
+    };
+    display(products_data);
+    
+//     function AddToCart(element){
+// cartLSData.push(element);
+// localStorage.setItem("ecomm-cart",JSON.stringify(cartLSData));
+//     alert("product added successfully");
+    // }
+</script>
+</html>
+               

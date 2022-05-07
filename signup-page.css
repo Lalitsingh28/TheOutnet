@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.sbox{
+    height: 60%;
+    width: 150px;
+    margin-top: 5px;
+}
+.sbox>h2{
+    cursor: pointer;
+}
+#title{
+    margin-top: 4px;
+}
+#title>h1{
+        letter-spacing: 10px;
+        margin-top: 40px;
+        cursor: pointer;
+}
+#navbar{
+    height: 50px;
+    width:100% ;
+    margin: auto;
+    display: flex;
+    background-color: #F2f2f2;
+    font-size: xx-small;
+    justify-content: space;
+}
+h3{
+    font-size: 16px;
+    font-weight: 400;
+}
+#navbar>img{
+    height: 20px;
+    width: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#options{
+    margin-left: 50%;
+    display: flex;
+    margin-top: 10px;
+    width: 55%;
+}
+#options>div{
+    margin-left: 8px;
+    justify-content: space-between;
+    font-size: xx-small;
+    cursor: pointer;
+}
+#navbar1{
+    height: 50px;
+    width:90% ;
+    margin: auto;
+    display: flex;
+    margin-top: 20px;
+    cursor: pointer;
+}
+h1{
+  margin-left: 200px; 
+  margin-bottom: 20px; 
+}
+#options1>div>img{
+    height: 30px;
+    width: 30px;
+    margin-top: 20px;
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin: auto;
+}
+#search{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 65px;
+}
+#box{
+    height: 45px ;
+    width: 90%;
+}
+#navbar2{
+    height: 50px;
+    width:70% ;
+    margin: auto;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+#navbar2>div{
+    justify-content: space-between;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#line{
+    height: auto;
+    width: 90%;
+    border: 0.3px solid #F2f2f2;
+    background-color: #F2f2f2;
+    margin:auto
+}
+#navbar4{
+    height: 35px;
+    width:90% ;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+    background-color: #F2f2f2;
+    font-size: 12px;
+}
+#navbar4>div>p{
+    margin-top: 10px;
+    font-weight: 100;
+    cursor: pointer;
+}
+#navbar4>img{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+div{
+    display: flex;
+}
+#container{
+    height: 500px;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+#card1{
+    width: 100%;
+    margin: auto;
+}
+#card1>div>img{
+    height: auto;
+    width:100%;
+}
+
+#div1{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    font-size: 21px;
+}
+#div2{
+    height: 100%;
+    width: 200%;
+    display: flex;
+    font-size: 38px;
+    margin: auto;
+    font-weight: 700;
+}
+#div3{
+    height: 100%;
+}
+#div1>p{
+    margin-top: 12px;
+}
+
+/* LOGIN FORM  */
+
+.loginpage{
+    width: 100%;
+    padding: 10% 0 0;
+    margin: auto;
+    background-image: url(https://www.theoutnet.com/assets/ton-background-images/high-res.jpg);
+    background-position: center;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    background-attachment:scroll;
+    height: 100%;
+}
+.form{
+    position: center;
+    z-index: 1;
+    background: white;
+    max-width: 400px;
+    max-height: 55vh;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    justify-content: center;
+}
+.form input{
+    outline:1;
+    background-color: #F2f2f2;
+    width: 100%;
+    border:0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.form button{
+    text-transform: uppercase;
+    outline: 0;
+    background-color: black;
+    width: 100%;
+    border:0;
+    padding: 15px;
+    color:#F2f2f2;
+    font-size: 14px;
+    cursor: pointer;
+}
+.form button:hover,.form button:active{
+    background: antiquewhite;
+}
+.form .message{
+    margin:15px 0 0;
+    color: black;
+    font-size: 12px;
+}
+.form .message a{
+    color:black;
+    text-decoration: none;
+}
+.form .Signup{
+    display:none;
+}
+#cont2{
+    width: 900000px;
+    height: 1500px;
+    margin: auto;
+    border: 1px transparent;
+}
+
+/* SEARCH BUTTON  */
+input{
+    margin-top: 10px;
+    height: 25px;
+    font-size: 0.6em;
+    padding-left: 10px;
+    border-radius: 10px;
+    transition: all .5s;
+    width: 0%;
+}
+.icon{
+    margin-top: 10px;
+    height: 25px;
+    width: 25px;
+    background: #F2f2f2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    color: black;
+    cursor: pointer;
+    transform: translateX(-10px);
+}
+.icon span{
+    transform: rotate(-45deg);
+}
+.active{
+    width: 50%;
+}
+input:hover{
+    box-shadow: 0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px #fff;
+}

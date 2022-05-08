@@ -301,7 +301,11 @@
     ];
 
 
+
+
+
     var cartLSData = [];
+
     var products = document.querySelector(".product");
 
     function display(data) {
@@ -333,14 +337,7 @@
             var discount = document.createElement("p");
             discount.textContent = element.discount;
 
-            /* var category=document.createElement("p");
-            category.textContent=element.category; */
-
-            // var button=document.createElement("button");
-            //             button.innerText="Add to Cart";
-            //             button.addEventListener("click",function(){
-            //                 AddToCart(element);
-            //             })
+          
 
             card.append(img, brand, name, price, priceno, discount);
             card.addEventListener("click", function () {
@@ -359,11 +356,7 @@
         window.location.href = "product.html";
 
     }
-//     function AddToCart(element){
-// cartLSData.push(element);
-// localStorage.setItem("ecomm-cart",JSON.stringify(cartLSData));
-//     alert("product added successfully");
-    // }
+
 </script>
 
 </html>

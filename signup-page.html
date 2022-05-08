@@ -16,7 +16,7 @@
     <div id="navbar">
       <div class="sbox" style="margin-left: 15px;">
         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIyMCI+PGcgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTAuNjE2IDEwLjU0OUE3LjExMSA3LjExMSAwIDAwMTIuMTUgOUMxNS41NjMgMTAuNTE3IDE4IDE0LjQyOCAxOCAxOS4wMDJWMjBIMHYtLjk5OGMwLTQuNTE0IDIuMzczLTguMzgyIDUuNzE3LTkuOTRhNi4wMyA2LjAzIDAgMDAxLjM4OSAxLjU3NGMtMi43MzcuOTMxLTQuODEyIDMuODMtNS4xNDUgNy4zNjhIMTYuMDRjLS4zNDQtMy42NTctMi41NS02LjYzLTUuNDIzLTcuNDU1eiIvPjxwYXRoIGQ9Ik05LjUgMmMtLjkyMiAwLTEuODQ0LjQxNS0yLjUzIDEuMTM4LS43MTMuNzUxLTEuMDYgMS43NC0uOTUgMi43MS4xNyAxLjY2NCAxLjEzNyAyLjk0NiAxLjk4NSAzLjU5NC41OTguNDU2IDEuMTA1LjU4MyAxLjM4LjU1NC45MTItLjEyMiAzLjM0LTEuNzMyIDMuNTk0LTQuMTQxbC4wMDEtLjAwN2MuMTEtLjk3LS4yMzctMS45NTktLjk1LTIuNzFDMTEuMzQ0IDIuNDE1IDEwLjQyMiAyIDkuNSAybS0uMTkgMTBjLS44MzYgMC0xLjcyNS0uMzQ3LTIuNTU5LS45OTMtMS41MDgtMS4xNzMtMi41MjYtMy4wMy0yLjcyLTQuOTY3LS4xNy0xLjUyMS4zNi0zLjA3MiAxLjQ1Mi00LjI0M0M2LjU0OC42NTYgOC4wMTIgMCA5LjUgMGMxLjQ4OCAwIDIuOTUyLjY1NiA0LjAxOCAxLjc5NyAxLjA5MiAxLjE3MSAxLjYyIDIuNzIgMS40NTEgNC4yNS0uMzM3IDMuMjIyLTMuMzggNS42NjYtNS4zMjkgNS45MzRhMi43NzIgMi43NzIgMCAwMS0uMzMuMDE5Ii8+PC9nPjwvc3ZnPg==" alt="">
-        <h2 style="margin-top: 5px;margin-left: 10px;"> Sign In</h2>
+        <h2 style="margin-top: 5px;margin-left: 10px;"><a href="signup-page.html">Sign In</a></h2>
       </div>
       <div class="sbox">
         <img src="https://toppng.com/uploads/preview/download-indian-flag-in-circle-11563258821iahidxunzt.png" alt="" margin="bottom">
@@ -33,14 +33,14 @@
     </div>
     <div id="navbar1"> 
         <div id="div1">
-            <p>Women<p>
+            <p><a href="womens.html">Women</a><p>
             <p style="margin-left: 15px; margin-right: 15px;">|</p>
-            <p >Men</p>
+            <p><a href="men.html">Men</a></p>
         </div>
         <div id="div2">
 
-            <P style="margin: auto;margin-left: 235px;">T H E<P>
-            <P style="margin: auto;margin-right: 155px;">O U T N E T</P>
+            <P style="margin: auto;margin-left: 235px;"><a href="index.html">T H E</a><P>
+            <P style="margin: auto;margin-right: 155px;"><a href="index.html">O U T N E T</a></P>
         </div>
         
     
@@ -101,7 +101,7 @@
 <div id="cont2">
 <div class="loginpage">
     <div class="form">
-        <form class="login">
+        <!-- <form class="login">
             <p><B>WELCOME</B></p><br> <hr> <br>
             <input type="text" placeholder="Password"/>
             <input type="text" placeholder="Email Id"/>
@@ -115,7 +115,29 @@
             <input type="text" placeholder="Email Id"/>
             <button>Register</button>
             <p class="message">Already Registered? <a href="#">Sign-In</a> </p>
+        </form> -->
+
+        <form action="" id="form">
+            <p><B>WELCOME</B></p><br> <hr> <br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+            <input type="submit" value="Sign In" id="SignUp">
+            <p class="message">Not Registered?<a href="#">Register</a> </p>
         </form>
+        <form action="" id="form1">
+            <p><B>REGISTER</B></p><br> <hr> <br>
+            <label for="name">Full Name</label>
+            <input type="text" name="name" id="name">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+            <input type="submit" value="SignUp" id="SignUp">
+            <p class="message">Already Registered? <a href="#">Sign-In</a> </p>
+        </form>
+
     </div> 
 </div>
 </div>
@@ -130,5 +152,52 @@
 <script>document.querySelector(".icon").addEventListener("click", function(){
     document.querySelector("input").classList.toggle("active");
 })</script>
+
+<!-- loginpage -->
+<script>
+    var userArr = JSON.parse(localStorage.getItem("userInfo"))
+
+    document.querySelector("#form").addEventListener("submit", LogIN)
+
+    function LogIN() {
+        event.preventDefault()
+        var loginData = {
+
+            email: form.email.value,
+            password: form.password.value
+        };
+
+        userArr.forEach(function (elem) {
+
+            if (userData.email === loginData.email && userData.password === loginData.password) {
+                window.location.href="index.html";
+            }
+            else {
+                alert("Wrong email or password");
+            }
+        });
+    }
+</script>
+<!-- signup-page -->
+<script>
+
+    document.querySelector("#form").addEventListener("submit", myFunction)
+
+    var userArr = JSON.parse(localStorage.getItem("userInfo")) || [];
+    function myFunction(){
+        event.preventDefault()
+
+       var userData = {
+           name : form.name.value,
+           email : form.email.value,
+           password : form.password.value
+       };
+
+       userArr.push(userData)
+       localStorage.setItem("userInfo", JSON.stringify(userArr))
+    //    alert("SignUp successful")
+       window.location.href = "LogIn.html"
+    }
+</script>
 </body>
 </html>

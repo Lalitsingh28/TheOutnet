@@ -39,7 +39,7 @@
 var wishlistData = JSON.parse(localStorage.getItem("wsh"));
 displayData(wishlistData)
 
-var bagArr = JSON.parse(localStorage.getItem("bagItem")) || []
+var bagArr = JSON.parse(localStorage.getItem("atc")) || []
 document.querySelector("#sort").addEventListener("change", sort)
 
 
@@ -92,7 +92,7 @@ function displayData(data) {
 
 function addToBag(elem) {
     bagArr.push(elem)
-    localStorage.setItem("bagItem", JSON.stringify(bagArr))
+    localStorage.setItem("atc", JSON.stringify(bagArr))
 }
 
 function Delete(elem, index) {

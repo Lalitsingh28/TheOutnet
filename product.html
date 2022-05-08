@@ -132,10 +132,12 @@
             font-size: 13px;
             font-weight: 450;
         }
+
     </style>
 </head>
 
 <body>
+   
     <div id="container">
 
     </div>
@@ -144,20 +146,22 @@
 </html>
 
 <script>
-    var detailData = [
-        {
-            img: "https://www.theoutnet.com/variants/images/43769801095378508/F/w358_q80.jpg",
-            brand: "VALENTINO",
-            name: "wool and silk-blend fallie jacket",
-            price: "$1,174",
-            price2: "$2498",
-            discount: "53%off",
-            category: "clothing",
-        }
-    ]
+    // var detailData = [
+    //     {
+    //         img: "https://www.theoutnet.com/variants/images/43769801095378508/F/w358_q80.jpg",
+    //         brand: "VALENTINO",
+    //         name: "wool and silk-blend fallie jacket",
+    //         price: "$1,174",
+    //         price2: "$2498",
+    //         discount: "53%off",
+    //         category: "clothing",
+    //     }
+    // ]
 
-    localStorage.setItem("detailData", JSON.stringify(detailData))
+    // localStorage.setItem("detailData", JSON.stringify(detailData))
     var details = JSON.parse(localStorage.getItem("addtocart"))
+    var array=JSON.parse(localStorage.getItem("atc"))||[]
+    var arrwish=JSON.parse(localStorage.getItem("wsh"))||[]
     displayData(details)
 
     function displayData(data) {
@@ -216,10 +220,16 @@
             var btn1 = document.createElement("button")
             btn1.setAttribute("id", "btn1")
             btn1.innerText = "Add To Bag"
+            btn1.addEventListener("click",function(){
+                clkfunc(elem)
+            })
 
             var btn2 = document.createElement("button")
             btn2.setAttribute("id", "btn2")
             btn2.innerText = "Add To Wish List"
+            btn2.addEventListener("click",function(){
+                wishfunc(elem)
+            })
 
             var dilevery = document.createElement("div")
             dilevery.setAttribute("id", "delivery")
@@ -239,5 +249,16 @@
 
             document.querySelector("#container").append(div1, div2)
         })
+        function clkfunc(elem){
+              array.push(elem)
+              localStorage.setItem("atc",JSON.stringify(array))
+              console.log(array)
+        }
+        function wishfunc(elem){
+            arrwish.push(elem)
+            localStorage.setItem("wsh",JSON.stringify(arrwish))
+            console.log(arrwish
+            )
+        }
     }
 </script>

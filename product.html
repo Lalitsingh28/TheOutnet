@@ -137,7 +137,9 @@
 </head>
 
 <body>
+
    
+
     <div id="container">
 
     </div>
@@ -146,22 +148,12 @@
 </html>
 
 <script>
-    // var detailData = [
-    //     {
-    //         img: "https://www.theoutnet.com/variants/images/43769801095378508/F/w358_q80.jpg",
-    //         brand: "VALENTINO",
-    //         name: "wool and silk-blend fallie jacket",
-    //         price: "$1,174",
-    //         price2: "$2498",
-    //         discount: "53%off",
-    //         category: "clothing",
-    //     }
-    // ]
-
-    // localStorage.setItem("detailData", JSON.stringify(detailData))
+    
     var details = JSON.parse(localStorage.getItem("addtocart"))
+
     var array=JSON.parse(localStorage.getItem("atc"))||[]
     var arrwish=JSON.parse(localStorage.getItem("wsh"))||[]
+
     displayData(details)
 
     function displayData(data) {
@@ -180,6 +172,7 @@
 
             var des = document.createElement("p")
             des.innerText = elem.name
+
 
             var price = document.createElement("p")
             price.innerText = elem.price
@@ -260,5 +253,70 @@
             console.log(arrwish
             )
         }
+
+
+            var price = document.createElement("p")
+            price.innerText = elem.price
+
+            var divCuttpr = document.createElement("div")
+            divCuttpr.setAttribute("id", "cuttPrice")
+
+            var span1 = document.createElement("span")
+            span1.innerText = elem.price2
+
+            var span2 = document.createElement("span")
+            span2.innerText = elem.discount
+
+            var color = document.createElement("p")
+            color.innerText = "Color: "
+
+            var size = document.createElement("p")
+            size.innerText = "Select a size"
+
+            var sizeBox = document.createElement("div")
+            sizeBox.setAttribute("id", "sizeBox")
+
+            var box1 = document.createElement("div")
+            box1.innerText = "XS"
+
+            var box2 = document.createElement("div")
+            box2.innerText = "S"
+
+            var box3 = document.createElement("div")
+            box3.innerText = "M"
+
+            var box4 = document.createElement("div")
+            box4.innerText = "L"
+
+            var box5 = document.createElement("div")
+            box5.innerText = "XL"
+
+            var btn1 = document.createElement("button")
+            btn1.setAttribute("id", "btn1")
+            btn1.innerText = "Add To Bag"
+
+            var btn2 = document.createElement("button")
+            btn2.setAttribute("id", "btn2")
+            btn2.innerText = "Add To Wish List"
+
+            var dilevery = document.createElement("div")
+            dilevery.setAttribute("id", "delivery")
+
+            var p = document.createElement("p")
+            p.innerText = "Delivery & Returns"
+
+            var p2 = document.createElement("p")
+            p2.innerText = "Find out more about our delivery options and how to exchange or return"
+
+
+            div1.append(image)
+            divCuttpr.append(span1, span2)
+            sizeBox.append(box1, box2, box3, box4, box5)
+            dilevery.append(p, p2)
+            div2.append(title, des, price, divCuttpr, color, size, sizeBox, btn1, btn2, dilevery)
+
+            document.querySelector("#container").append(div1, div2)
+        })
+
     }
 </script>

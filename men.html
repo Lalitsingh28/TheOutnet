@@ -108,13 +108,14 @@
 
         .product>div>p:nth-child(4) {
             color: red;
-            font-size:20px;
-            margin-top:0;
+            font-size: 20px;
+            margin-top: 0;
         }
+
         .product>div>p:nth-child(5) {
-            font-size:16px;
-            margin-top:-20px;
-            
+            font-size: 16px;
+            margin-top: -20px;
+
         }
     </style>
 </head>
@@ -300,11 +301,12 @@
     ];
 
 
-    var cartLSData =  [];
+
+
+
+    var cartLSData = [];
 
     var products = document.querySelector(".product");
-
-
 
     function display(data) {
         products.innerHTML = null;
@@ -335,14 +337,7 @@
             var discount = document.createElement("p");
             discount.textContent = element.discount;
 
-            /* var category=document.createElement("p");
-            category.textContent=element.category; */
-
-            // var button=document.createElement("button");
-            //             button.innerText="Add to Cart";
-            //             button.addEventListener("click",function(){
-            //                 AddToCart(element);
-            //             })
+          
 
             card.append(img, brand, name, price, priceno, discount);
             card.addEventListener("click", function () {
@@ -358,14 +353,10 @@
         localStorage.setItem("addtocart", JSON.stringify(cartLSData));
 
 
-window.location.href="product.html";
+        window.location.href = "product.html";
 
     }
-//     function AddToCart(element){
-// cartLSData.push(element);
-// localStorage.setItem("ecomm-cart",JSON.stringify(cartLSData));
-//     alert("product added successfully");
-    // }
+
 </script>
 
 </html>

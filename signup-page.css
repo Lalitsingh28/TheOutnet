@@ -97,6 +97,10 @@ h1{
     margin-top: 20px;
     cursor: pointer;
 }
+#div2 >p{
+    word-spacing: 10px;
+    letter-spacing: 4px;
+}
 #line{
     height: auto;
     width: 90%;

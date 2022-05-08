@@ -132,13 +132,12 @@
             font-size: 13px;
             font-weight: 450;
         }
-
     </style>
 </head>
 
 <body>
 
-   
+
 
     <div id="container">
 
@@ -148,11 +147,11 @@
 </html>
 
 <script>
-    
+    var count = JSON.parse(localStorage.getItem("count")) || 0;
     var details = JSON.parse(localStorage.getItem("addtocart"))
 
-    var array=JSON.parse(localStorage.getItem("atc"))||[]
-    var arrwish=JSON.parse(localStorage.getItem("wsh"))||[]
+    var array = JSON.parse(localStorage.getItem("atc")) || []
+    var arrwish = JSON.parse(localStorage.getItem("wsh")) || []
 
     displayData(details)
 
@@ -213,14 +212,14 @@
             var btn1 = document.createElement("button")
             btn1.setAttribute("id", "btn1")
             btn1.innerText = "Add To Bag"
-            btn1.addEventListener("click",function(){
+            btn1.addEventListener("click", function () {
                 clkfunc(elem)
             })
 
             var btn2 = document.createElement("button")
             btn2.setAttribute("id", "btn2")
             btn2.innerText = "Add To Wish List"
-            btn2.addEventListener("click",function(){
+            btn2.addEventListener("click", function () {
                 wishfunc(elem)
             })
 
@@ -242,19 +241,31 @@
 
             document.querySelector("#container").append(div1, div2)
         })
-        function clkfunc(elem){
-              array.push(elem)
-              localStorage.setItem("atc",JSON.stringify(array))
-              console.log(array)
+
+        function clkfunc(elem) {
+            array.push(elem)
+            count++;
+            localStorage.setItem("atc", JSON.stringify(array))
+            localStorage.setItem("count",JSON.stringify(count))
+            console.log(array)
+            window.location.href = "cart.html"
         }
-        function wishfunc(elem){
+        function wishfunc(elem) {
             arrwish.push(elem)
-            localStorage.setItem("wsh",JSON.stringify(arrwish))
+
+            localStorage.setItem("wsh", JSON.stringify(arrwish))
             console.log(arrwish)
             window.location.href = "whishlist.html/index.html"
+        }    
+
+            
+            
         }
 
 
 
-    }
+
+    
 </script>
+
+

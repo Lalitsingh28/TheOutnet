@@ -1,1 +1,243 @@
-https://github.com/Lalitsingh28/TheOutnet.git
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        #container {
+            width: 80%;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #container>div {
+            width: 45%;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #div2 {
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+        }
+
+        #div2>h3 {
+            letter-spacing: 3px;
+            font-size: 22px;
+        }
+
+        #div2>h3+p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        h3+p+p {
+            color: red;
+            font-weight: 500;
+        }
+
+        #cuttPrice {
+            width: 100px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        #cuttPrice>span:first-child {
+            text-decoration: line-through;
+        }
+
+        span {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        #cuttPrice+p+p {
+            margin: 25px 0px 10px 0px;
+        }
+
+        #sizeBox {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        #sizeBox>div {
+            width: 100px;
+            padding: 10px 24px;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+        }
+
+        #btn1 {
+            padding: 16px 0px;
+            margin-bottom: 25px;
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+        }
+
+        #btn1:hover {
+            border: 1px solid gray;
+            background-color: gray;
+            cursor: pointer;
+        }
+
+        #btn2 {
+            padding: 16px 0px;
+            margin-bottom: 50px;
+            background-color: white;
+            color: black;
+            font-weight: 450;
+            border: 1px solid white;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+        }
+
+        #btn2:hover {
+            border: 1px solid black;
+        }
+
+        #delivery {
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+            padding: 25px;
+        }
+
+        #delivery>p:first-child {
+            font-size: 18px;
+            font-weight: 450;
+            word-spacing: 5px;
+            margin-bottom: 20px;
+        }
+
+        #delivery>p:last-child {
+            font-size: 13px;
+            font-weight: 450;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    var detailData = [
+        {
+            img: "https://www.theoutnet.com/variants/images/43769801095378508/F/w358_q80.jpg",
+            brand: "VALENTINO",
+            name: "wool and silk-blend fallie jacket",
+            price: "$1,174",
+            price2: "$2498",
+            discount: "53%off",
+            category: "clothing",
+        }
+    ]
+
+    localStorage.setItem("detailData", JSON.stringify(detailData))
+    var details = JSON.parse(localStorage.getItem("addtocart"))
+    displayData(details)
+
+    function displayData(data) {
+
+        data.forEach(function (elem) {
+            var div1 = document.createElement("div")
+
+            var image = document.createElement("img")
+            image.setAttribute("src", elem.img)
+
+            var div2 = document.createElement("div")
+            div2.setAttribute("id", "div2")
+
+            var title = document.createElement("h3")
+            title.innerText = elem.brand
+
+            var des = document.createElement("p")
+            des.innerText = elem.name
+
+            var price = document.createElement("p")
+            price.innerText = elem.price
+
+            var divCuttpr = document.createElement("div")
+            divCuttpr.setAttribute("id", "cuttPrice")
+
+            var span1 = document.createElement("span")
+            span1.innerText = elem.price2
+
+            var span2 = document.createElement("span")
+            span2.innerText = elem.discount
+
+            var color = document.createElement("p")
+            color.innerText = "Color: "
+
+            var size = document.createElement("p")
+            size.innerText = "Select a size"
+
+            var sizeBox = document.createElement("div")
+            sizeBox.setAttribute("id", "sizeBox")
+
+            var box1 = document.createElement("div")
+            box1.innerText = "XS"
+
+            var box2 = document.createElement("div")
+            box2.innerText = "S"
+
+            var box3 = document.createElement("div")
+            box3.innerText = "M"
+
+            var box4 = document.createElement("div")
+            box4.innerText = "L"
+
+            var box5 = document.createElement("div")
+            box5.innerText = "XL"
+
+            var btn1 = document.createElement("button")
+            btn1.setAttribute("id", "btn1")
+            btn1.innerText = "Add To Bag"
+
+            var btn2 = document.createElement("button")
+            btn2.setAttribute("id", "btn2")
+            btn2.innerText = "Add To Wish List"
+
+            var dilevery = document.createElement("div")
+            dilevery.setAttribute("id", "delivery")
+
+            var p = document.createElement("p")
+            p.innerText = "Delivery & Returns"
+
+            var p2 = document.createElement("p")
+            p2.innerText = "Find out more about our delivery options and how to exchange or return"
+
+
+            div1.append(image)
+            divCuttpr.append(span1, span2)
+            sizeBox.append(box1, box2, box3, box4, box5)
+            dilevery.append(p, p2)
+            div2.append(title, des, price, divCuttpr, color, size, sizeBox, btn1, btn2, dilevery)
+
+            document.querySelector("#container").append(div1, div2)
+        })
+    }
+</script>

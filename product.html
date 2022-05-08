@@ -250,73 +250,11 @@
         function wishfunc(elem){
             arrwish.push(elem)
             localStorage.setItem("wsh",JSON.stringify(arrwish))
-            console.log(arrwish
-            )
+            console.log(arrwish)
+            window.location.href = "whishlist.html/index.html"
         }
 
 
-            var price = document.createElement("p")
-            price.innerText = elem.price
-
-            var divCuttpr = document.createElement("div")
-            divCuttpr.setAttribute("id", "cuttPrice")
-
-            var span1 = document.createElement("span")
-            span1.innerText = elem.price2
-
-            var span2 = document.createElement("span")
-            span2.innerText = elem.discount
-
-            var color = document.createElement("p")
-            color.innerText = "Color: "
-
-            var size = document.createElement("p")
-            size.innerText = "Select a size"
-
-            var sizeBox = document.createElement("div")
-            sizeBox.setAttribute("id", "sizeBox")
-
-            var box1 = document.createElement("div")
-            box1.innerText = "XS"
-
-            var box2 = document.createElement("div")
-            box2.innerText = "S"
-
-            var box3 = document.createElement("div")
-            box3.innerText = "M"
-
-            var box4 = document.createElement("div")
-            box4.innerText = "L"
-
-            var box5 = document.createElement("div")
-            box5.innerText = "XL"
-
-            var btn1 = document.createElement("button")
-            btn1.setAttribute("id", "btn1")
-            btn1.innerText = "Add To Bag"
-
-            var btn2 = document.createElement("button")
-            btn2.setAttribute("id", "btn2")
-            btn2.innerText = "Add To Wish List"
-
-            var dilevery = document.createElement("div")
-            dilevery.setAttribute("id", "delivery")
-
-            var p = document.createElement("p")
-            p.innerText = "Delivery & Returns"
-
-            var p2 = document.createElement("p")
-            p2.innerText = "Find out more about our delivery options and how to exchange or return"
-
-
-            div1.append(image)
-            divCuttpr.append(span1, span2)
-            sizeBox.append(box1, box2, box3, box4, box5)
-            dilevery.append(p, p2)
-            div2.append(title, des, price, divCuttpr, color, size, sizeBox, btn1, btn2, dilevery)
-
-            document.querySelector("#container").append(div1, div2)
-        })
 
     }
 </script>

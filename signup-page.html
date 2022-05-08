@@ -172,9 +172,7 @@
             if (userData.email === loginData.email && userData.password === loginData.password) {
                 window.location.href="index.html";
             }
-            else {
-                alert("Wrong email or password");
-            }
+           
         });
     }
 </script>
@@ -196,7 +194,7 @@
        userArr.push(userData)
        localStorage.setItem("userInfo", JSON.stringify(userArr))
     //    alert("SignUp successful")
-       window.location.href = "LogIn.html"
+       window.location.href = "index.html"
     }
 </script>
 </body>

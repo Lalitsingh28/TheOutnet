@@ -108,13 +108,14 @@
 
         .product>div>p:nth-child(4) {
             color: red;
-            font-size:20px;
-            margin-top:0;
+            font-size: 20px;
+            margin-top: 0;
         }
+
         .product>div>p:nth-child(5) {
-            font-size:16px;
-            margin-top:-20px;
-            
+            font-size: 16px;
+            margin-top: -20px;
+
         }
     </style>
 </head>
@@ -300,7 +301,7 @@
     ];
 
 
-    var cartLSData = JSON.parse(localStorage.getItem("addtocart")) || [];
+    var cartLSData = [];
 
     var products = document.querySelector(".product");
 
@@ -358,7 +359,7 @@
         localStorage.setItem("addtocart", JSON.stringify(cartLSData));
 
 
-window.location.href="product.html";
+        window.location.href = "product.html";
 
     }
 //     function AddToCart(element){

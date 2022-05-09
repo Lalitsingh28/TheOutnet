@@ -44,18 +44,7 @@
 </html>
 
 <script>
-    // var productDetails = [
-    //     {
-    //         productimg:
-    //     "https://www.theoutnet.com/variants/images/1647597280507873/F/w960.jpg",
-    //   productname: "EMILIA WICKSTEAD",
-    //   productType: "Jeremy pinstriped crepe peplum blazer",
-    //   productcolor: "Midnight blue   |   UK 14", 
-    //   productprice:"$654",
-    //   cutprice:"$1,455"
-
-    //     }
-    // ]
+   
     var count = JSON.parse(localStorage.getItem("count"))
     var array = JSON.parse(localStorage.getItem("atc"))
     displaydata(array)
@@ -101,57 +90,21 @@
         document.querySelector("#b3>div:nth-child(6)>span:last-child").innerText = elem.price2
         
     })
-    // var box3 = document.createElement("div")
-    //     var head = document.createElement("h2")
-    //     head.innerText = "Order Summary"
-    //     var sub_total = document.createElement("div")
-    //     var span1 = document.createElement("span")
-    //     span1.innerText = "Sub-Total"
-    //     var span2 = document.createElement("span")
-    //     span2.innerText = elem.price
-
-    //     var Shipping = document.createElement("div")
-    //     var span3 = document.createElement("span")
-    //     span3.innerText = "Shipping"
-    //     var span4 = document.createElement("span")
-    //     span4.innerText = "Free"
-
-    //     var tax = document.createElement("div")
-    //     var span5 = document.createElement("span")
-    //     span5.innerText = "Taxes & Duties"
-    //     var span6 = document.createElement("span")
-    //     span6.innerText = "$170"
-
-    //     var promocode = document.createElement("div")
-    //     var span7 = document.createElement("span")
-    //     span7.innerText = "Add a Promo Code"
-    //     var input = document.createElement("input")
-
-    //     var total = document.createElement("div")
-    //     var span8 = document.createElement("span")
-    //     span8.innerText = "Total(USD)"
-    //     var span9 = document.createElement("span")
-    //     span9.innerText = "$170"
-
-    //     var btn = document.createElement("button")
-    //     btn.innerText = "Proceed to Checkout"
-
-    //     sub_total.append(span1,span2)
-    //     Shipping.append(span3,span4)
-    //     tax.append(span5,span6)
-    //     promocode.append(span7,input)
-    //     total.append(span8,span9)
-
-    //     box3.append(sub_total,Shipping,tax,promocode,total,btn)
-    //     document.querySelector("#b3").append(box3)
-
+   
     }
       function deletefun(elem,index){
           array.splice(index,1)
           localStorage.setItem("atc",JSON.stringify(array))
           displaydata(array)
-          count--
-            localStorage.setItem("count",JSON.stringify(count))
+          if(count==0){
+              count =0;
+          }
+          else{
+              count--;
+              localStorage.setItem("count",JSON.stringify(count))
+          }
+        //   count--
+        //     localStorage.setItem("count",JSON.stringify(count))
             window.location.reload()
             
       }

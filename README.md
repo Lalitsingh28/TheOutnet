@@ -17,7 +17,7 @@
     HTML 5, CSS, JavaScript and LocalStorage
     
   ## Team Members :-
-  - [@Lalitsongh28](https://github.com/Lalitsingh28)
+  - [@Lalitsingh28](https://github.com/Lalitsingh28)
   - [@Sudharshan098](https://github.com/Sudharshan098)
   - [@sumansauravmay](https://github.com/sumansauravmay)
   - [@hena1019](https://github.com/hena1019)
